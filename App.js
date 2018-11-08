@@ -16,8 +16,8 @@ export default class App extends React.Component {
   }
 
   _handleBarCodeRead = async() => {
-    console.log('press');
     try {
+      await this.state.sound.setPositionAsync(0);
       await this.state.sound.playAsync();
     } catch(error) {}
   }
